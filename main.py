@@ -14,7 +14,8 @@ if response_stacje.status_code == 200:
     lista_stacji = response_stacje.json()
     df_stacje = pd.json_normalize(lista_stacji)
 
-    print(df_stacje)
+    # print(df_stacje)
+    print(df_stacje.head(3))
     # print(lista_stacji)
 else:
     print("Błąd podczas pobierania danych stacji")
