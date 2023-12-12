@@ -16,9 +16,13 @@ response_dane = requests.get(url_dane)
 
 # Sprawdzenie, czy zapytanie się powiodło
 if response_dane.status_code == 200:
+    print(f"🟢 Poprawnie pobrano dane pomiarowe dla {index}: 🟢")
     dane_pomiarowe = response_dane.json()
     mojDataFrame = pd.json_normalize(dane_pomiarowe)
-    print(mojDataFrame.columns)
-    print(mojDataFrame.head(3))
+    # print(mojDataFrame.columns)
+    # print(mojDataFrame.head(3))
+
+    print(mojDataFrame['pm10IndexLevel.indexLevelName'])
+
 else:
-    print("Błąd podczas pobierania danych pomiarowych")
+    print("🔴 Błąd podczas pobierania danych pomiarowych")
