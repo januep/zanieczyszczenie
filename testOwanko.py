@@ -3,7 +3,7 @@ import pandas as pd
 
 # ID stanowiska pomiarowego
 sensor_id = 2
-index = 52
+index = 944 #Poznań - Winogrady
 
 # URL API do pobrania danych z konkretnego stanowiska pomiarowego
 # url_dane = f'http://api.gios.gov.pl/pjp-api/rest/data/getData/{sensor_id}'
